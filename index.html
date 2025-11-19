@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto de Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media-queries.css">
 </head>
@@ -16,8 +17,19 @@
             <div id="forms">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Preencha os dados para acessar sua conta.</p>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-symbols-outlined">email</span>
+                        <input type="email" name="login" id="ilogin" required placeholder="Insira seu email aqui" autocomplete="email" maxlength="30">
+                        <label for="ilogin">Email:</label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-symbols-outlined">vpn_key</span>
+                        <input type="password" name="senha" id="isenha" required placeholder="Insira sua senha aqui" autocomplete="current-password" minlength="8" maxlength="20">
+                        <label for="isenha">Senha:</label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">Esqueci a senha <span class="material-symbols-outlined">question_mark</span></a>
                 </form>
             </div>
         </section>
